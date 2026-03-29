@@ -37,18 +37,17 @@ const EmployeeTable = ({ employees = [], onDelete, onView, onEdit }) => {
                 <td className="p-2 align-middle">{emp.type}</td>
                 <td className="p-2 align-middle">{emp.status}</td>
 
-                <td className="flex items-center justify-center gap-2 p-2 align-middle">
-                  <button
-                    className="p-1"
-                    onClick={() => onView(emp.employeeId)}
-                  >
-                    <FaRegEye className="hover:text-green-500" />
+                <td className="p-2 text-center align-middle">
+                  <button onClick={() => onView(emp.employeeId)}>
+                    <FaRegEye className="inline mx-1 hover:text-green-600" />
                   </button>
+
                   <button onClick={() => onEdit(emp.employeeId)}>
-                    <LuPencilLine className="hover:text-blue-500" />
+                    <LuPencilLine className="inline mx-1 hover:text-blue-500" />
                   </button>
+
                   <button onClick={() => onDelete(emp.employeeId)}>
-                    <RiDeleteBin6Line className="hover:text-red-500" />
+                    <RiDeleteBin6Line className="inline mx-1 hover:text-red-500" />
                   </button>
                 </td>
               </tr>
